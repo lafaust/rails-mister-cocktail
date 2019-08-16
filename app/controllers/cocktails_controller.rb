@@ -24,6 +24,6 @@ class CocktailsController < ApplicationController
   private
   # To whitelist the fields your users can act on with strong params:
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :title, :body, :photo)
   end
 end
