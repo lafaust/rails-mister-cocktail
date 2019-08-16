@@ -42,6 +42,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
+# to key the secret keys secret and not public (ex : from cloudinary)
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
