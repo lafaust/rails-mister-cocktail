@@ -12,12 +12,15 @@
 require 'json'
 require 'open-uri'
 
+puts 'Cleaning database...'
+Ingredient.destroy_all if Rails.env.development?
+
 puts "creating seeds"
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 user_serialized = open(url).read
 list = JSON.parse(user_serialized)
 
-20.times do
+30.times do
 Ingredient.create(name: list['drinks'][rand(0..159)]['strIngredient1'])
 end
 puts "finished"
