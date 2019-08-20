@@ -1,5 +1,16 @@
-<h1>Add an ingredient & dose</h1>
+<div class="container">
 
-<%= render "form_dose", dose:@dose %>
-<br>
-<%= link_to "back to index", cocktails_path %>
+  <div class="row justify-content-center">
+    <div class="col-12">
+
+      <h1>Add an ingredient & dose</h1>
+      <br>
+
+      <%= render "form_dose", dose:@dose %>
+      <br>
+      <br>
+      <%= link_to "back to index", cocktails_path %>
+
+    </div>
+  </div>
+</div>

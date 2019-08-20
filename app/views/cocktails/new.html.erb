@@ -1,6 +1,17 @@
-<h1>Add a Cocktail</h1>
+<div class="container">
 
-<%= render "form_cocktail", cocktail:@cocktail %>
+  <div class="row justify-content-center">
+    <div class="col-12">
 
-<br>
-<%= link_to "back to index", cocktails_path %>
+      <h1>Add a Cocktail</h1>
+      <br>
+
+      <%= render "form_cocktail", cocktail:@cocktail %>
+
+      <br>
+      <br>
+      <%= link_to "back to index", cocktails_path %>
+
+    </div>
+  </div>
+</div>
