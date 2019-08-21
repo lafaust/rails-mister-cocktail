@@ -1,15 +1,14 @@
 <div class="container">
 
-  <div class="row justify-content-center">
+  <div class="row justify-content-cente">
     <div class="col-12">
 
       <h1> <%= @cocktail.name %> </h1>
         <br>
-        <div class="d-dflex justify-content-center">
+        <div class="d-flex">
           <div>
-            <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill, class: "img-cocktail"%>
           </div>
-          <br>
           <div>
             <h2>Ingredients</h2>
             <!-- Un cocktail has many doses, donc: -->
@@ -27,6 +26,7 @@
             <p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"  %></p>
           </div>
         </div>
+      <br>
       <br>
       <p><%= link_to "back to index", cocktails_path %></p>
 

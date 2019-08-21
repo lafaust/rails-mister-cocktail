@@ -9,7 +9,7 @@ class DosesController < ApplicationController
     @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
     if @dose.save
-      redirect_to cocktails_path(id: @cocktail.id)
+      redirect_to cocktail_path(id: @cocktail.id)
     else
       #renvoie sur le formulaire
       render 'new'
